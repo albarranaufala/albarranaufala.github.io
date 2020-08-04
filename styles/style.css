@@ -1,0 +1,116 @@
+@import url('https://fonts.googleapis.com/css2?family=Mulish:wght@400;900&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    text-rendering: optimizeLegibility !important;
+    -webkit-font-smoothing: antialiased !important;
+    font-family: 'Mulish', sans-serif;
+    box-sizing: border-box;
+    color: #303030;
+}
+
+.container {
+    max-width: 1120px;
+    margin: auto;
+    padding: 0 2rem;
+}
+
+h1 {
+    font-size: 52px;
+}
+
+.shadow {
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.25);
+}
+
+.mr-1 {
+    margin-right: 1rem;
+}
+.mr-05 {
+    margin-right: 0.5rem;
+}
+
+.my-1 {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+.btn {
+    padding: 0.75rem 1.5rem;
+    text-decoration: none;
+    border-radius: 4px;
+    display: inline-block;
+}
+
+.btn-primary {
+    background-color: #022965;
+    color: #fff;
+    transition: background-color 0.25s;
+}
+
+.btn-primary:hover {
+    background-color: #00173A;
+}
+
+.logo-albarra {
+    width: 46px;
+    height: 46px;
+    border-radius: 8px;
+    background-color: #EF883C;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    font-weight: bold;
+    font-size: 24px;
+}
+
+header {
+    position: fixed;
+    width: 100%;
+    padding: 1rem;
+}
+
+header nav {
+    display: flex;
+    justify-content: space-between;
+    border-radius: 8px;
+    padding: 1rem;
+}
+
+nav ul {
+    display: flex;
+}
+
+nav ul li {
+    list-style: none;
+}
+
+nav ul.right {
+    display: flex;
+    align-items: center;
+}
+
+nav ul.right li a {
+    text-decoration: none;
+    display: inline-block;
+    padding: 0.5rem 1rem;
+}
+
+#home .container {
+    display: flex;
+}
+
+#home .left {
+    flex: 1;
+    height: 636px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+#home .right {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+}
