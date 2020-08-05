@@ -44,10 +44,10 @@ renderPortfolio(portfolios, 'Semua');
 
 burger.addEventListener("click", function(e) {
     if(!isBurgerClicked){
-        burger.firstElementChild.src = 'assets/icon/close.svg';
+        burger.firstElementChild.firstElementChild.src = 'assets/icon/close.svg';
         navResponsive.style.maxHeight = navResponsive.scrollHeight + 'px';
     } else {
-        burger.firstElementChild.src = 'assets/icon/burger.svg';
+        burger.firstElementChild.firstElementChild.src = 'assets/icon/burger.svg';
         navResponsive.style.maxHeight = 0;
     }
     isBurgerClicked = !isBurgerClicked;

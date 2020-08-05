@@ -165,6 +165,7 @@ nav ul.nav-responsive li a{
     }
     nav ul.burger {
         display: flex;
+        align-items: center;
     }
     #home .container {
         flex-direction: column;
