@@ -7,6 +7,7 @@
     font-family: 'Mulish', sans-serif;
     box-sizing: border-box;
     color: #303030;
+    scroll-behavior: smooth;
 }
 
 .container {
@@ -26,8 +27,17 @@ h1 {
 .mr-1 {
     margin-right: 1rem;
 }
+
 .mr-05 {
     margin-right: 0.5rem;
+}
+
+.mb-1 {
+    margin-bottom: 1rem;
+}
+
+.mb-05 {
+    margin-bottom: 0.5rem;
 }
 
 .my-1 {
@@ -60,6 +70,16 @@ h1 {
     background-color: #00173A;
 }
 
+.btn-secondary {
+    background-color: #fff;
+    color: #022965;
+    transition: background-color 0.25s;
+}
+
+.btn-secondary:hover {
+    background-color: #E3E3E3;
+}
+
 .logo-albarra {
     width: 46px;
     height: 46px;
@@ -70,6 +90,12 @@ h1 {
     align-items: center;
     font-weight: bold;
     font-size: 24px;
+    transition: all 0.25s;
+    cursor: default;
+}
+
+.logo-albarra:hover {
+    padding-left: 8px;
 }
 
 header {
@@ -80,11 +106,14 @@ header {
 }
 
 header nav {
-    display: flex;
-    justify-content: space-between;
     border-radius: 8px;
     padding: 1rem;
     background-color: #fff;
+}
+
+.nav-wrapper {
+    display: flex;
+    justify-content: space-between;
 }
 
 nav ul {
@@ -100,10 +129,30 @@ nav ul.right {
     align-items: center;
 }
 
+nav ul.burger {
+    display: none;
+    cursor: pointer;
+}
+
 nav ul.right li a {
     text-decoration: none;
     display: inline-block;
     padding: 0.5rem 1rem;
+}
+
+nav ul.nav-responsive {
+    flex-direction: column;
+    text-align: center;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.25s ease-out;
+}
+
+nav ul.nav-responsive li{
+    margin-top: 1rem;
+}
+nav ul.nav-responsive li a{
+    text-decoration: none;
 }
 
 #home .container {
@@ -114,18 +163,20 @@ nav ul.right li a {
     nav ul.right {
         display: none;
     }
-
+    nav ul.burger {
+        display: flex;
+    }
     #home .container {
         flex-direction: column;
     }
-
     #home .left {
         padding-top: 110px;
         margin-top: 1rem;
         margin-bottom: 4rem;
     }
-
-    .greeting-container, .socmed-container, .buttons-container {
+    .greeting-wrapper,
+    .socmed-wrapper,
+    .buttons-wrapper {
         text-align: center;
     }
 }
@@ -144,4 +195,146 @@ nav ul.right li a {
     justify-content: center;
     align-items: flex-end;
     padding: 2rem 2rem 0 2rem;
+}
+
+#portfolio {
+    background-color: #EF883C;
+    padding: 6rem 0;
+    border-radius: 16px 16px 0 0;
+}
+
+#portfolio h2 {
+    color: #fff;
+    position: relative;
+}
+
+#portfolio h2::before {
+    content: "";
+    height: 4px;
+    width: 70px;
+    position: absolute;
+    bottom: -1rem;
+    background-color: #F1D375;
+}
+
+.role-wrapper {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 4rem;
+}
+
+.role-wrapper li {
+    color: #fff;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+}
+
+.role-wrapper li.active {
+    color: #00173A;
+    background-color: #F1D375;
+    border-radius: 1rem;
+}
+
+.portfolio-wrapper {
+    margin-top: 2rem;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.portfolio-item {
+    background-color: #fff;
+    margin: 1rem;
+    width: 280px;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.portfolio-img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+}
+
+.portfolio-info {
+    padding: 1rem;
+}
+
+.portfolio-info .role {
+    font-size: 10px;
+    display: inline-block;
+    padding: 0.25rem 0.5rem;
+    background-color: #F6E7C0;
+    border-radius: 1rem;
+    color: #022965;
+    margin-bottom: 0.5rem;
+}
+
+#kenalan {
+    background-color: #D0001B;
+    padding: 6rem 0;
+    margin-top: -1rem;
+    border-radius: 16px 16px 0 0;
+}
+
+#kenalan .container {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    column-gap: 4rem;
+}
+
+#kenalan h2 {
+    color: #fff;
+    position: relative;
+}
+
+#kenalan .right p {
+    color: #fff;
+    margin-top: 2rem;
+    line-height: 1.75rem;
+    margin-bottom: 2rem;
+}
+
+@media (max-width: 800px) {
+    #kenalan .container {
+        grid-template-columns: 1fr;
+    }
+    #kenalan h2 {
+        margin-top: 4rem;
+    }
+}
+
+.card {
+    background-color: #fff;
+    padding: 2rem;
+    border-radius: 8px;
+}
+
+.my-photo {
+    width: 120px;
+    height: 120px;
+    margin: auto;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.my-photo img {
+    width: 100%;
+    height: 100%;
+}
+
+.my-info label {
+    font-size: 12px;
+    margin-top: 1rem;
+    display: inline-block;
+}
+
+footer {
+    padding: 6rem 0;
+    text-align: center;
+    background-color: #A10015;
+}
+
+footer p {
+    color: #fff;
 }

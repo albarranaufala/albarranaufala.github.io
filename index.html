@@ -5,22 +5,34 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Albarra Naufala Erdanto</title>
     <link rel="stylesheet" href="styles/style.css">
+    <link rel="icon" href="assets/icon/logo.svg">
 </head>
 <body>
     <header>
         <nav class="shadow">
-            <ul class="left">
-                <li>
-                    <div class="logo-albarra">
-                        AL
-                    </div>
-                </li>
-            </ul>
-            <ul class="right">
-                <li><a href="">Home</a></li>
-                <li><a href="">Pengenalan</a></li>
-                <li><a href="">Portofolio</a></li>
-                <li><a href="" class="btn btn-primary">Hubungi Saya</a></li>
+            <div class="nav-wrapper">
+                <ul class="left">
+                    <li>
+                        <div class="logo-albarra">
+                            AL
+                        </div>
+                    </li>
+                </ul>
+                <ul class="right">
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#portfolio">Portofolio</a></li>
+                    <li><a href="#kenalan">Tentang Saya</a></li>
+                    <li><a href="mailto:albarraerdanto@gmail.com" class="btn btn-primary">Hubungi Saya</a></li>
+                </ul>
+                <ul class="burger">
+                    <img src="assets/icon/burger.svg" alt="Menu">
+                </ul>
+            </div>
+            <ul class="nav-responsive">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#portfolio">Portofolio</a></li>
+                <li><a href="#kenalan">Tentang Saya</a></li>
+                <li><a href="mailto:albarraerdanto@gmail.com" class="btn btn-primary">Hubungi Saya</a></li>
             </ul>
         </nav>
     </header>
@@ -28,19 +40,19 @@
         <article id="home">
             <div class="container">
                 <div class="left">
-                    <div class="greeting-container">
+                    <div class="greeting-wrapper">
                         <p>Halo, Saya</p>
                         <h1>Albarra Naufala</h1>
                         <p>Frontend Developer, Fullstack Developer, dan Videographer</p>
                     </div>
-                    <div class="my-1 socmed-container">
-                        <a class="mr-05" href=""><img src="assets/icon/linkedin.svg" alt="Linkedin"></a>
-                        <a class="mr-05" href=><img src="assets/icon/instagram.svg" alt="Instagram"></a>
-                        <a class="mr-05" href=""><img src="assets/icon/github.svg" alt="Github"></a>
+                    <div class="my-1 socmed-wrapper">
+                        <a class="mr-05" href="https://www.linkedin.com/in/albarra-naufala-erdanto-3b501817a/" target="_blank"><img src="assets/icon/linkedin.svg" alt="Linkedin"></a>
+                        <a class="mr-05" href="https://www.instagram.com/albarranaufala" target="_blank"><img src="assets/icon/instagram.svg" alt="Instagram"></a>
+                        <a class="mr-05" href="https://github.com/albarranaufala" target="_blank"><img src="assets/icon/github.svg" alt="Github"></a>
                     </div>
-                    <div class="buttons-container">
-                        <a href="" class="btn btn-primary shadow mr-05">Hubungi Saya</a>
-                        <a href="" class="btn btn-secondary shadow">Portofolio</a>
+                    <div class="buttons-wrapper">
+                        <a href="mailto:albarraerdanto@gmail.com" class="btn btn-primary shadow mr-05 mb-05">Hubungi Saya</a>
+                        <a href="#portfolio" class="btn btn-secondary shadow">Portofolio</a>
                     </div>
                 </div>
                 <div class="right">
@@ -48,9 +60,52 @@
                 </div>
             </div>
         </article>
+        <article id="portfolio">
+            <div class="container">
+                <h2>Portofolio</h2>
+                <ul class="role-wrapper">
+                    <li class="active">Semua</li>
+                    <li>Frontend Developer</li>
+                    <li>Fullstack Developer</li>
+                    <li>Videographer</li>
+                </ul>
+                <div class="portfolio-wrapper">
+                </div>
+            </div>
+        </article>
+        <article id="kenalan">
+            <div class="container">
+                <aside>
+                    <div class="card">
+                        <div class="my-photo shadow">
+                            <img src="assets/img/albarra.jpg" alt="Foto Albarra">
+                        </div>
+                        <div class="my-info">
+                            <label>Nama Lengkap</label>
+                            <p>Albarra Naufala Erdanto</p>
+                            <label>Email</label>
+                            <p>albarraerdanto@gmail.com</p>
+                            <label>Domisili</label>
+                            <p>Yogyakarta & Pontianak</p>
+                        </div>
+                    </div>
+                </aside>
+                <div class="right">
+                    <h2>Karya seni yang baik adalah hasil kerja sama hati dan pikiran.</h2>
+                    <p>Sejak kecil, saya sangat mencintai pembuatan karya seni. Mulai dari pembuatan karya visual, karya film, karya foto, hingga saat kuliah yang saya sebut karya teknologi informasi. Produk teknologi informasi saya sebut menjadi karya seni. Hal tersebut dikarenakan menurut saya karya seni adalah karya yang dapat memberikan manfaat bagi orang yang melihat dan menggunakannya, memberi hiburan, dan dibuat dengan hati dan pikiran.</p>
+                    <a href="https://www.linkedin.com/in/albarra-naufala-erdanto-3b501817a/" target="_blank" class="mr-05"><img src="assets/icon/linkedin (1).svg" alt="Linkedin"></a>
+                    <a href="https://www.instagram.com/albarranaufala" target="_blank" class="mr-05"><img src="assets/icon/instagram-sketched (1).svg" alt="Instagram"></a>
+                    <a href="https://github.com/albarranaufala" target="_blank" class="mr-05"><img src="assets/icon/github (1).svg" alt="Github"></a>
+                </div>
+            </div>
+        </article>
     </main>
     <footer>
-
+        <div class="container">
+            <p>&copy; Albarra Portfolio 2020</p>
+        </div>
     </footer>
+
+    <script src="scripts/script.js"></script>
 </body>
 </html>
