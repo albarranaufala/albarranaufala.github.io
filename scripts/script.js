@@ -3,6 +3,12 @@ const navResponsive = document.querySelector('.nav-responsive');
 let isBurgerClicked = false;
 let portfolios = [
     {
+        role: 'Fullstack Developer',
+        img: 'assets/img/lingkar-belajar.jpg',
+        name: 'Lingkar Belajar Online',
+        year: 2020,
+    },
+    {
         role: 'Frontend Developer',
         img: 'assets/img/kastil-creative.jpg',
         name: 'Kastil Creative Website',
