@@ -10,6 +10,7 @@
     scroll-behavior: smooth;
 }
 
+
 .container {
     max-width: 1120px;
     margin: auto;
@@ -244,11 +245,17 @@ nav ul.nav-responsive li a{
 }
 
 .portfolio-item {
+    cursor: pointer;
     background-color: #fff;
     margin: 1rem;
     width: 280px;
     border-radius: 8px;
     overflow: hidden;
+}
+
+.portfolio-item:hover {
+    transform: scale(1.02);
+    transition: 0.25s all;
 }
 
 .portfolio-img {
@@ -261,7 +268,7 @@ nav ul.nav-responsive li a{
     padding: 1rem;
 }
 
-.portfolio-info .role {
+.role {
     font-size: 10px;
     display: inline-block;
     padding: 0.25rem 0.5rem;
@@ -338,4 +345,105 @@ footer {
 
 footer p {
     color: #fff;
+}
+
+.modal {
+    display: none;
+}
+
+.modal.show {
+    display: block;
+    position: fixed;
+    background-color: rgba(0, 0, 0, 0.5);
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 999;
+    padding: 1rem;
+    overflow-y: auto;
+}
+
+.modal-dialog {
+    z-index: 9999;
+    width: 100%;
+    max-width: 780px;
+    margin: auto;
+    background-color: #FFF;
+    opacity: 1;
+    border-radius: 8px;
+    position: relative;
+}
+
+.modal-dialog .dismiss{
+    position: absolute;
+    cursor: pointer;
+    right: 1rem;
+    top: 1rem;
+    padding: 0.25rem;
+    color: #EF883C;
+    z-index: 1;
+}
+.modal-dialog .dismiss > * {
+    color: #FFF;
+}
+
+.modal-dialog .img-container {
+    position: relative;
+    width: 100%;
+    padding-top: 40%;
+}
+
+.img-container img{
+    border-radius: 8px 8px 0 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: top;
+}
+
+.modal-content{
+    padding: 1rem;
+}
+
+body.modal-open {
+    overflow: hidden;
+}
+
+.fade-in {
+	opacity: 1;
+	animation-name: fadeInOpacity;
+	animation-iteration-count: 1;
+	animation-timing-function: ease-in;
+	animation-duration: 0.2s;
+}
+
+@keyframes fadeInOpacity {
+	0% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
+}
+
+.fade-up {
+	animation-name: fadeUpTranslate;
+	animation-iteration-count: 1;
+	animation-timing-function: ease-in;
+	animation-duration: 0.2s;
+}
+
+@keyframes fadeUpTranslate {
+	0% {
+		transform: translateY(24px);
+	}
+	100% {
+		transform: translateY(0);
+	}
 }
