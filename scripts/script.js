@@ -50,16 +50,16 @@ let portfolios = [
     {
         id: 4,
         role: 'Fullstack Developer',
-        img: 'assets/img/lingkar-belajar.jpg',
-        name: 'Lingkar Belajar Online',
+        img: 'assets/img/lptm.jpg',
+        name: 'LPTM Company Website',
         year: 2020,
         description: `
         <p>
-            Lingkar Belajar adalah sebuah website forum diskusi mahasiswa UII yang bertujuan untuk menghadirkan lingkungan belajar online seperti di kampus.
+            LPTM Company Website adalah sebuah website yang bertujuan untuk memperkenalkan perusahaan LPTM dan mendigitalkan proses bisnis yang ada di lingkungan LPTM.
         </p>`,
-        tech: 'Laravel 7, Bootstrap',
-        duration: '1 minggu',
-        url: 'https://lingkarbelajar.online',
+        tech: 'Laravel 7, VueJS, Bootstrap, GoogleDriveAPI, CKEditor, ApexChart',
+        duration: '3 bulan',
+        url: 'https://lptm.co.id',
     },
     {
         id: 5,
@@ -78,6 +78,20 @@ let portfolios = [
     {
         id: 6,
         role: 'Fullstack Developer',
+        img: 'assets/img/lingkar-belajar.jpg',
+        name: 'Lingkar Belajar Online',
+        year: 2020,
+        description: `
+        <p>
+            Lingkar Belajar adalah sebuah website forum diskusi mahasiswa UII yang bertujuan untuk menghadirkan lingkungan belajar online seperti di kampus.
+        </p>`,
+        tech: 'Laravel 7, Bootstrap',
+        duration: '1 minggu',
+        url: 'https://lingkarbelajar.online',
+    },
+    {
+        id: 7,
+        role: 'Fullstack Developer',
         img: 'assets/img/posyandu-mangga.jpg',
         name: 'Smart Posyandu Mangga',
         year: 2020,
@@ -88,20 +102,6 @@ let portfolios = [
         tech: 'Laravel, Bootstrap',
         duration: '2 minggu',
         url: 'https://posyandu-mangga.herokuapp.com',
-    },
-    {
-        id: 7,
-        role: 'Fullstack Developer',
-        img: 'assets/img/lptm.jpg',
-        name: 'LPTM Company Website',
-        year: 2020,
-        description: `
-        <p>
-            LPTM Company Website adalah sebuah website yang bertujuan untuk memperkenalkan perusahaan LPTM dan mendigitalkan proses bisnis yang ada di lingkungan LPTM.
-        </p>`,
-        tech: 'Laravel 7, VueJS, Bootstrap, GoogleDriveAPI, CKEditor, ApexChart',
-        duration: '3 bulan',
-        url: 'https://lptm.co.id',
     },
     {
         id: 8,

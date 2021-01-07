@@ -256,6 +256,8 @@ nav ul.nav-responsive li a{
 .portfolio-item:hover {
     transform: scale(1.02);
     transition: 0.25s all;
+    box-shadow: 0px 4px 16px rgba(0, 0, 0, 0.25);
+
 }
 
 .portfolio-img {
