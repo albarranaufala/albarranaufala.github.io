@@ -4,6 +4,37 @@ let isBurgerClicked = false;
 let portfolios = [
     {
         id: 1,
+        role: 'Frontend Developer',
+        img: 'assets/img/jala-web.jpg',
+        name: 'Jala Web App',
+        year: 2021,
+        description: `
+        <p>
+            Jala Web App adalah aplikasi yang digunakan petambak udang dalam memonitoring kondisi tambak mereka.
+        </p>`,
+        tech: 'VueJS',
+        duration: '6 bulan',
+        url: 'https://app.jala.tech',
+    },
+    {
+        id: 2,
+        role: 'Fullstack Developer',
+        img: 'assets/img/deafcare-indonesia.jpg',
+        name: 'Deafcare Indonesia V2',
+        year: 2021,
+        description: `
+        <p>
+            Deafcare adalah solusi bagi pendamping dan penyandang tunarungu untuk mendapatkan informasi terlengkap bagi mereka.
+        </p>
+        <p>
+            Saya membangun semua lini website, seperti backend (Laravel), frontend (VueJS), testing (PHPUnit), dan deployment (Hosting dan Vercel).
+        </p>`,
+        tech: 'Laravel, NuxtJS (VueJS)',
+        duration: '2 minggu',
+        url: 'https://deafcareindonesia.com',
+    },
+    {
+        id: 3,
         role: 'Android Developer',
         img: 'assets/img/konsl.jpg',
         name: 'Konsl',
@@ -17,7 +48,7 @@ let portfolios = [
         url: 'https://bit.ly/KonslApp',
     },
     {
-        id: 2,
+        id: 4,
         role: 'Fullstack Developer',
         img: 'assets/img/dsv.jpg',
         name: 'Delokal Smart Village',
@@ -34,7 +65,7 @@ let portfolios = [
         url: 'https://dev.dsv.xyz',
     },
     {
-        id: 3,
+        id: 5,
         role: 'Frontend Developer',
         img: 'assets/img/deafcare.jpg',
         name: 'Deafcare Indonesia',
@@ -48,7 +79,7 @@ let portfolios = [
         url: 'https://deafcareindonesia.com',
     },
     {
-        id: 4,
+        id: 6,
         role: 'Fullstack Developer',
         img: 'assets/img/lptm.jpg',
         name: 'LPTM Company Website',
@@ -62,7 +93,7 @@ let portfolios = [
         url: 'https://lptm.co.id',
     },
     {
-        id: 5,
+        id: 7,
         role: 'Frontend Developer',
         img: 'assets/img/kastil-creative.jpg',
         name: 'Kastil Creative Website',
@@ -76,7 +107,7 @@ let portfolios = [
         url: 'https://kastilcreative.com',
     },
     {
-        id: 6,
+        id: 8,
         role: 'Fullstack Developer',
         img: 'assets/img/lingkar-belajar.jpg',
         name: 'Lingkar Belajar Online',
@@ -90,7 +121,7 @@ let portfolios = [
         url: 'https://lingkarbelajar.online',
     },
     {
-        id: 7,
+        id: 9,
         role: 'Fullstack Developer',
         img: 'assets/img/posyandu-mangga.jpg',
         name: 'Smart Posyandu Mangga',
@@ -104,7 +135,7 @@ let portfolios = [
         url: 'https://posyandu-mangga.herokuapp.com',
     },
     {
-        id: 8,
+        id: 10,
         role: 'Fullstack Developer',
         img: 'assets/img/twalang.jpg',
         name: 'Twalang Website',
