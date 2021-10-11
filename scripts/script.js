@@ -238,3 +238,37 @@ document.querySelector('body').addEventListener('click', event => {
         document.querySelector('body').classList.remove('modal-open');
     }
 });
+
+async function getMediumStories() {
+    const mediumRssFeed = "https://medium.com/feed/@albarranaufala";
+    const url = new URL("https://api.rss2json.com/v1/api.json");
+    url.search = new URLSearchParams({
+        rss_url: mediumRssFeed,
+    })
+    const result = await fetch(url);
+    const data = await result.json();
+    return data;
+}
+
+function mediumItemTemplate(article) {
+    return (
+        `<div class="medium-item">
+            <img src="${article.thumbnail}" alt="${article.title}">
+            <div class="medium-item-info">
+                <h3>${article.title}</h3>
+                <div>
+                    <a href="${article.link}" target="_blank" rel="noopener noreferrer" class="btn-sm btn-primary mt-05">Baca Selengkapnya</a>
+                </div>
+            </div>
+        </div>`
+    )
+}
+
+async function renderMediumStories() {
+    const { items } = await getMediumStories();
+    const mediumListHTML = items.map(item => mediumItemTemplate(item)).join('');
+    const mediumWrapperDOM = document.querySelector('.medium-wrapper');
+    mediumWrapperDOM.innerHTML = mediumListHTML;
+}
+
+renderMediumStories();
