@@ -21,7 +21,7 @@ burger.addEventListener("click", function(e) {
 
 function renderPortofolioItem(portfolio){
     return `<div class="portfolio-item" data-id="${portfolio.id}">
-        <img class="portfolio-img" src="${portfolio.img}" alt="">
+        <img class="portfolio-img" src="${portfolio.img}" alt="${portfolio.name}">
         <div class="portfolio-info">
             <span class="role">${portfolio.role}</span>
             <h3>${portfolio.name}</h3>
