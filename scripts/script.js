@@ -59,16 +59,9 @@ function renderPortfolio(portfolios, filter){
     } else {
         filtered = portfolios
             .sort((a, b) => b.id - a.id)
-            .filter(el => {
-                if(el.role == filter){
-                    return el;
-                }
-            });
+            .filter(el => el.role == filter);
     }
-    portfolioWrapper.innerHTML = '';
-    filtered.forEach(el => {
-        portfolioWrapper.innerHTML += renderPortofolioItem(el);
-    });
+    portfolioWrapper.innerHTML = filtered.map(por => renderPortofolioItem(por)).join('');
 }
 
 async function getPortfolioData() {
