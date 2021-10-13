@@ -491,7 +491,7 @@ body.modal-open {
 }
 
 .medium-wrapper {
-    margin-top: 2rem;
+    margin-top: 4rem;
     display: grid;
     grid-template-columns: repeat(3, minmax(0, 1fr));
     gap: 2rem
