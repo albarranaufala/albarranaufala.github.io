@@ -1,156 +1,12 @@
 const burger = document.querySelector('.burger');
 const navResponsive = document.querySelector('.nav-responsive');
 let isBurgerClicked = false;
-let portfolios = [
-    {
-        id: 1,
-        role: 'Frontend Developer',
-        img: 'assets/img/jala-web.jpg',
-        name: 'Jala Web App',
-        year: 2021,
-        description: `
-        <p>
-            Jala Web App adalah aplikasi yang digunakan petambak udang dalam memonitoring kondisi tambak mereka.
-        </p>`,
-        tech: 'VueJS',
-        duration: '6 bulan',
-        url: 'https://app.jala.tech',
-    },
-    {
-        id: 2,
-        role: 'Fullstack Developer',
-        img: 'assets/img/deafcare-indonesia.jpg',
-        name: 'Deafcare Indonesia V2',
-        year: 2021,
-        description: `
-        <p>
-            Deafcare adalah solusi bagi pendamping dan penyandang tunarungu untuk mendapatkan informasi terlengkap bagi mereka.
-        </p>
-        <p>
-            Saya membangun semua lini website, seperti backend (Laravel), frontend (VueJS), testing (PHPUnit), dan deployment (Hosting dan Vercel).
-        </p>`,
-        tech: 'Laravel, NuxtJS (VueJS)',
-        duration: '2 minggu',
-        url: 'https://deafcareindonesia.com',
-    },
-    {
-        id: 3,
-        role: 'Android Developer',
-        img: 'assets/img/konsl.jpg',
-        name: 'Konsl',
-        year: 2020,
-        description: `
-        <p>
-            Konsl adalah sebuah aplikasi berbasis android untuk konsultasi kesehatan mental mahasiswa terutama mahasiswa UII.
-        </p>`,
-        tech: 'Kotlin',
-        duration: '2 minggu',
-        url: 'https://bit.ly/KonslApp',
-    },
-    {
-        id: 4,
-        role: 'Fullstack Developer',
-        img: 'assets/img/dsv.jpg',
-        name: 'Delokal Smart Village',
-        year: 2020,
-        description: `
-        <p>
-            Delokal Smart Village adalah sistem pengelolaan, manajemen atau sebagai ERP dari desa wisata. Beberapa fitur yang saya kerjakan adalah sebagai berikut:
-        </p>
-        <p>1. Pembelian dan penjualan produk desa wisata</p>
-        <p>2. Manajemen aset</p>
-        <p>3. Manajemen QR Produk dan Reward</p>`,
-        tech: 'Laravel 7, Bootstrap, JQuery',
-        duration: '2 bulan',
-        url: 'https://dev.dsv.xyz',
-    },
-    {
-        id: 5,
-        role: 'Frontend Developer',
-        img: 'assets/img/deafcare.jpg',
-        name: 'Deafcare Indonesia',
-        year: 2020,
-        description: `
-        <p>
-            Deafcare Indonesia adalah sebuah aplikasi untuk membantu teman-teman tuli dalam mencari kebutuhannya dan membantu mencarikan pelayanan terbaik untuk mereka.
-        </p>`,
-        tech: 'Laravel 7, Bootstrap, JQuery',
-        duration: '1 bulan',
-        url: 'https://deafcareindonesia.com',
-    },
-    {
-        id: 6,
-        role: 'Fullstack Developer',
-        img: 'assets/img/lptm.jpg',
-        name: 'LPTM Company Website',
-        year: 2020,
-        description: `
-        <p>
-            LPTM Company Website adalah sebuah website yang bertujuan untuk memperkenalkan perusahaan LPTM dan mendigitalkan proses bisnis yang ada di lingkungan LPTM.
-        </p>`,
-        tech: 'Laravel 7, VueJS, Bootstrap, GoogleDriveAPI, CKEditor, ApexChart',
-        duration: '3 bulan',
-        url: 'https://lptm.co.id',
-    },
-    {
-        id: 7,
-        role: 'Frontend Developer',
-        img: 'assets/img/kastil-creative.jpg',
-        name: 'Kastil Creative Website',
-        year: 2020,
-        description: `
-        <p>
-            Kastil Creative Website adalah sebuah website landing page yang bertujuan untuk memperkenalkan bisnis kreatif Kastil Creative.
-        </p>`,
-        tech: 'Bootstrap, AOS Library',
-        duration: '2 minggu',
-        url: 'https://kastilcreative.com',
-    },
-    {
-        id: 8,
-        role: 'Fullstack Developer',
-        img: 'assets/img/lingkar-belajar.jpg',
-        name: 'Lingkar Belajar Online',
-        year: 2020,
-        description: `
-        <p>
-            Lingkar Belajar adalah sebuah website forum diskusi mahasiswa UII yang bertujuan untuk menghadirkan lingkungan belajar online seperti di kampus.
-        </p>`,
-        tech: 'Laravel 7, Bootstrap',
-        duration: '1 minggu',
-        url: 'https://lingkarbelajar.online',
-    },
-    {
-        id: 9,
-        role: 'Fullstack Developer',
-        img: 'assets/img/posyandu-mangga.jpg',
-        name: 'Smart Posyandu Mangga',
-        year: 2020,
-        description: `
-        <p>
-            Smart Posyandu Mangga adalah sebuah Sistem Pendukung Keputusan untuk mengetahui status gizi balita yang dilayani di posyandu mangga.
-        </p>`,
-        tech: 'Laravel, Bootstrap',
-        duration: '2 minggu',
-        url: 'https://posyandu-mangga.herokuapp.com',
-    },
-    {
-        id: 10,
-        role: 'Fullstack Developer',
-        img: 'assets/img/twalang.jpg',
-        name: 'Twalang Website',
-        year: 2019,
-        description: `
-        <p>
-            Twalang adalah proyek akhir saya pada semester 3. Twalang merupakan sebuah website untuk menjual jasa wisata dan memungkinkan penyedia jasa wisatanya memanajemen jasa yang ditawarkan.
-        </p>`,
-        tech: 'Laravel 7, Bootstrap, GoogleDriveAPI, ChartJS',
-        duration: '3 bulan',
-        url: 'https://bitbucket.org/weareabcd/twalang-repository/src/master/',
-    },
-]
+let portfolios = []
 
-renderPortfolio(portfolios, 'Semua');
+async function renderAllPortfolio() {
+    portfolios = await getPortfolioData();
+    renderPortfolio(portfolios, 'Semua');
+}
 
 burger.addEventListener("click", function(e) {
     if(!isBurgerClicked){
@@ -199,18 +55,46 @@ function renderPortfolio(portfolios, filter){
     const portfolioWrapper = document.querySelector('.portfolio-wrapper');
     let filtered;
     if(filter == 'Semua'){
-        filtered = portfolios;
+        filtered = portfolios.sort((a, b) => b.id - a.id);
     } else {
-        filtered = portfolios.filter(el => {
-            if(el.role == filter){
-                return el;
-            }
-        });
+        filtered = portfolios
+            .sort((a, b) => b.id - a.id)
+            .filter(el => {
+                if(el.role == filter){
+                    return el;
+                }
+            });
     }
     portfolioWrapper.innerHTML = '';
     filtered.forEach(el => {
         portfolioWrapper.innerHTML += renderPortofolioItem(el);
     });
+}
+
+async function getPortfolioData() {
+    const spreadsheetId = '1jzaXV9_m0Mb9DnjWDR4d59L_qCdlBfxRh-9gET-c_R0'
+    const apiKey = 'AIzaSyDAjCPFNAr408jQCtIVA9y3a6ltElDPTdk';
+    const url = `https://sheets.googleapis.com/v4/spreadsheets/${spreadsheetId}/?key=${apiKey}&includeGridData=true`;
+    const result = await fetch(url)
+    const { sheets } = await result.json();
+    const sheet = sheets[0];
+    const data = sheet.data[0].rowData
+        .filter((_, index) => index !== 0) // Mulai dari index 1 (menghindari nama kolom)
+        .map(row => {
+            const { values } = row;
+            return {
+                id: values[0].formattedValue,
+                role: values[1].formattedValue,
+                img: values[2].formattedValue,
+                name: values[3].formattedValue,
+                year: values[4].formattedValue,
+                description: values[5].formattedValue,
+                tech: values[6].formattedValue,
+                duration: values[7].formattedValue,
+                url: values[8].formattedValue
+            }
+        })
+    return data;
 }
 
 const roleWrapper = document.querySelectorAll('.role-wrapper li');
@@ -271,4 +155,5 @@ async function renderMediumStories() {
     mediumWrapperDOM.innerHTML = mediumListHTML;
 }
 
+renderAllPortfolio();
 renderMediumStories();
